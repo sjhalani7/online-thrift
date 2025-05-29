@@ -49,5 +49,25 @@ def get_store_items(store_id):
     return jsonify(formatted_items)
 
 
+@app.route("/api/stores/<store_id>/items/<item_id>")
+def get_store_item(store_id, item_id):
+    cursor.execute(
+        "SELECT * FROM items WHERE store_id = %s AND id = %s", (store_id, item_id)
+    )
+    item = cursor.fetchone()
+    formatted_item = {
+        "id": item[0],
+        "store_id": item[1],
+        "name": item[2],
+        "brand": item[3],
+        "price": float(item[4]),
+        "original_price": float(item[5]),
+        "tags": item[6],
+        "image_url": item[7],
+        "description": item[8],
+    }
+    return jsonify(formatted_item)
+
+
 if __name__ == "__main__":
     app.run(debug=True)
