@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Store Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <a href="home.html" class="logo">ThriftFindr</a>
+        <ul class="nav-links">
+            <li><a href="browse.html">Browse Stores</a></li>
+            <li><a href="about.html">About Us</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <!-- Store Name and Details (will be filled by JS) -->
+    <h2 class="store-name">Loading...</h2>
+    <p class="store-details"></p>
+
+    <!-- Our Story Section -->
+    <section class="our-story-section">
+        <div class="story-text">
+            <h3>Our Story</h3>
+            <p>Founded by two friends in 2017, The Wardrobe Project started as a weekend flea market booth and has grown into Oakland's go-to spot for nostalgia lovers. We believe every piece tells a story, and we're passionate about connecting our community with sustainable fashion and one-of-a-kind finds. Come explore and see what vintage treasures you'll uncover!</p>
+        </div>
+        <div class="story-image">
+            <img src="wardrobeproject.jpeg" alt="Our Story">
+        </div>
+    </section>
+
+    <!-- Featured Items -->
+    <section class="items-grid">
+        <h3>Featured Items</h3>
+        <div class="items-container">
+            <!-- Items will be dynamically inserted here -->
+            <p>Loading items...</p>
+        </div>
+    </section>
+</main>
+
+<!-- Item Popup Modal -->
+<div id="itemModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeItemPopup()">&times;</span>
+        <img id="modalImg" src="" alt="">
+        <h2 id="modalTitle"></h2>
+        <p id="modalPrice"></p>
+        <p id="modalDescription"></p>
+    </div>
+</div>
+
+<script src="store.js"></script>
+</body>
+</html>
