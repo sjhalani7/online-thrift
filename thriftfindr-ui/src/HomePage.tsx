@@ -57,7 +57,7 @@ const HomePage: React.FC = () => {
           price: `$${item.price.toFixed(2)}`,
           storeName: `Store ID: ${item.store_id}` 
         }));
-        setFreshlyFoundItems(formattedForCards.slice(0, 5)); // Take first 5 for carousel
+        setFreshlyFoundItems(formattedForCards.slice(0, 5)); 
       } catch (err) {
         if (err instanceof Error) {
             setErrorFreshlyFound(err.message);
@@ -76,7 +76,7 @@ const HomePage: React.FC = () => {
     if (scrollContainerRef.current) {
       const { scrollLeft, scrollWidth, clientWidth } = scrollContainerRef.current;
       setShowLeftArrow(scrollLeft > 0);
-      setShowRightArrow(scrollLeft < scrollWidth - clientWidth -1); // -1 for pixel rounding issues
+      setShowRightArrow(scrollLeft < scrollWidth - clientWidth -1); 
     }
   };
 
@@ -145,12 +145,7 @@ const HomePage: React.FC = () => {
                   <p className="text-sm text-brand-gray-medium">+ 150 stores listed</p>
                 </div>
               </div>
-              {/* Illustration Column */}
               <div className="hidden md:flex items-center justify-center p-8 h-full">
-                {/* Placeholder for Illustration */}
-                {/* <div className="bg-orange-100 w-full h-64 md:h-full rounded-lg flex items-center justify-center text-orange-400">
-                  <p className="text-2xl">Illustration Placeholder</p>
-                </div> */}
                 <img 
                   src="/images/thrift-shop-illustration.jpg" 
                   alt="Thrift shop illustration" 
@@ -229,7 +224,7 @@ const HomePage: React.FC = () => {
                   href="#contact-us" 
                   className="inline-block bg-white text-brand-charcoal font-semibold py-3 px-8 rounded-lg shadow-md hover:bg-gray-100 transition-colors text-lg"
                 >
-                 <button 
+                  <button 
                     onClick={() => setIsModalOpen(true)}
                     className="inline-block bg-white text-brand-charcoal font-semibold py-3 px-8 rounded-lg shadow-md hover:bg-gray-100 transition-colors text-lg"
                   >

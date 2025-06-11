@@ -55,7 +55,6 @@ const StoreListingPage: React.FC = () => {
         }
         const apiStoresData: ApiStore[] = await response.json();
         
- 
         const formattedStores: DisplayStoreData[] = apiStoresData.map(store => ({
           id: store.id,
           name: store.name,
@@ -89,7 +88,6 @@ const StoreListingPage: React.FC = () => {
     setActiveCategories(prev => 
       prev.map(cat => cat.name === name ? { ...cat, active: !cat.active } : cat)
     );
-    // TODO: Refetch or filter stores based on active categories
   };
 
 

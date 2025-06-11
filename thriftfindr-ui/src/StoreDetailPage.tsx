@@ -216,7 +216,7 @@ const StoreDetailPage: React.FC = () => {
           </div>
 
           {loadingItems && paginatedAllItems.length === 0 && !searchTerm && activeItemCategories.every(c => !c.active) ? (
-             <p className="text-center text-brand-gray-medium py-8">Loading items...</p>
+            <p className="text-center text-brand-gray-medium py-8">Loading items...</p>
           ) : !loadingItems && paginatedAllItems.length === 0 && searchTerm ? (
             <p className="text-center text-brand-gray-medium py-8">No items match "{searchTerm}". Try a different search or adjust category filters.</p>
           ) : !loadingItems && paginatedAllItems.length === 0 && activeItemCategories.some(c=>c.active) ? (

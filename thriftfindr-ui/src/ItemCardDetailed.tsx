@@ -15,7 +15,6 @@ const ItemCardDetailed: React.FC<ItemCardDetailedProps> = (
   { id, imageUrl, name, price, descriptionTags, description, onViewItemClick }
 ) => {
   
- 
   const handleViewItemClick = () => {
     
     if (onViewItemClick) {

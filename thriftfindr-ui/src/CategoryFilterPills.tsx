@@ -10,7 +10,7 @@ export interface StoreCategoryPill {
 
 interface CategoryFilterPillsProps {
   categories: StoreCategoryPill[];
-  onPillClick?: (name: string) => void; // Optional: if pills should be interactive
+  onPillClick?: (name: string) => void; 
 }
 
 const CategoryFilterPills: React.FC<CategoryFilterPillsProps> = ({ categories, onPillClick }) => {

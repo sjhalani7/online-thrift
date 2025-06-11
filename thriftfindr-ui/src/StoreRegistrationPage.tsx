@@ -46,7 +46,6 @@ const StoreRegistrationPage: React.FC<StoreRegistrationPageProps> = ({ isOpen, o
                 className="bg-white rounded-3xl shadow-2xl w-full max-w-2xl overflow-hidden font-inter"
                 onClick={(e) => e.stopPropagation()}
             >
-                {/* Gradient header similar to homepage CTA */}
                 <div className="bg-gradient-to-r from-cta-gradient-from to-cta-gradient-to px-6 py-6 relative">
                     <h2 className="text-3xl font-semibold text-white text-center">Register Your Storefront</h2>
                     <button
@@ -57,8 +56,6 @@ const StoreRegistrationPage: React.FC<StoreRegistrationPageProps> = ({ isOpen, o
                         <X size={24} />
                     </button>
                 </div>
-
-                {/* Form content with consistent spacing and styling */}
                 <form onSubmit={handleSubmit} className="p-6 flex flex-col items-center text-center space-y-4 bg-white">
                     <input
                         type="text"
